@@ -1,0 +1,14 @@
+package main
+
+import (
+	"github.com/hashicorp/hcl"
+)
+
+var (
+	data = DATA
+)
+
+func main() {
+	var out interface{}
+	hcl.Unmarshal([]byte(data), &out)
+}

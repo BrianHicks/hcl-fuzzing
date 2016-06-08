@@ -1,0 +1,19 @@
+panic: unquote "\40600" err: invalid syntax
+panic
+github.com/hashicorp/hcl/hcl/token.Token.Value
+github.com/hashicorp/hcl.(*decoder).decodeMap
+github.com/hashicorp/hcl.(*decoder).decode
+github.com/hashicorp/hcl.(*decoder).decodeSlice
+github.com/hashicorp/hcl.(*decoder).decode
+github.com/hashicorp/hcl.(*decoder).decodeInterface
+github.com/hashicorp/hcl.(*decoder).decode
+github.com/hashicorp/hcl.(*decoder).decodeMap
+github.com/hashicorp/hcl.(*decoder).decode
+github.com/hashicorp/hcl.(*decoder).decodeInterface
+github.com/hashicorp/hcl.(*decoder).decode
+github.com/hashicorp/hcl.DecodeObject
+github.com/hashicorp/hcl.Unmarshal
+github.com/BrianHicks/fuzz-hcl.ParseSafely
+github.com/BrianHicks/fuzz-hcl.Fuzz
+go-fuzz-dep.Main
+main.main

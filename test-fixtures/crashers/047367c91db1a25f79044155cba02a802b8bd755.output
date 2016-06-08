@@ -1,0 +1,38 @@
+illegal
+illegal
+panic: regexp: Compile("[[:space:]]*\xbf\xdc<<700\\z"): error parsing regexp: invalid UTF-8: `¿Ü<<700\z`
+
+goroutine 1 [running]:
+panic(0x19b960, 0xc82000a470)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/runtime/panic.go:481 +0x3e6
+regexp.MustCompile(0xc8200102c0, 0x15, 0xc820041618)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/regexp/regexp.go:232 +0x1d5
+github.com/hashicorp/hcl/hcl/scanner.(*Scanner).scanHeredoc(0xc820072c30)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/hcl/scanner/scanner.go:433 +0xc6a
+github.com/hashicorp/hcl/hcl/scanner.(*Scanner).Scan(0xc820072c30, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/hcl/scanner/scanner.go:180 +0xa74
+github.com/hashicorp/hcl/hcl/parser.(*Parser).scan(0xc820041c88, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/hcl/parser/parser.go:376 +0x156
+github.com/hashicorp/hcl/hcl/parser.(*Parser).objectKey(0xc820041c88, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/hcl/parser/parser.go:196 +0x122
+github.com/hashicorp/hcl/hcl/parser.(*Parser).objectItem(0xc820041c88, 0x0, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/hcl/parser/parser.go:125 +0xd5
+github.com/hashicorp/hcl/hcl/parser.(*Parser).objectList(0xc820041c88, 0x0, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/hcl/parser/parser.go:70 +0x127
+github.com/hashicorp/hcl/hcl/parser.(*Parser).Parse(0xc820041c88, 0xc820072c30, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/hcl/parser/parser.go:53 +0x166
+github.com/hashicorp/hcl/hcl/parser.Parse(0x3d3000, 0x10, 0x200000, 0x1, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/hcl/parser/parser.go:40 +0x24d
+github.com/hashicorp/hcl.parse(0x3d3000, 0x10, 0x200000, 0x0, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/parse.go:26 +0xc3
+github.com/hashicorp/hcl.Unmarshal(0x3d3000, 0x10, 0x200000, 0x18d2e0, 0xc82000a340, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/decoder.go:27 +0x7e
+github.com/BrianHicks/fuzz-hcl.ParseSafely(0x3d3000, 0x10, 0x200000, 0x0, 0x0, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/BrianHicks/fuzz-hcl/fuzz.go:20 +0xc1
+github.com/BrianHicks/fuzz-hcl.Fuzz(0x3d3000, 0x10, 0x200000, 0xc820070058)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/BrianHicks/fuzz-hcl/fuzz.go:11 +0x105
+go-fuzz-dep.Main(0x23a3e8)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/go-fuzz-dep/main.go:49 +0x14c
+main.main()
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/go.fuzz.main/main.go:10 +0x23
+exit status 2

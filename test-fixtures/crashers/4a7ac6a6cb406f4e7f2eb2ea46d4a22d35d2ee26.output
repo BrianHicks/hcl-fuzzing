@@ -1,0 +1,48 @@
+illegal
+illegal
+illegal
+illegal
+panic: bytes.Buffer: UnreadRune: previous operation was not ReadRune
+
+goroutine 1 [running]:
+panic(0x1c8620, 0xc82000b130)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/runtime/panic.go:481 +0x3e6
+github.com/hashicorp/hcl/json/scanner.(*Scanner).unread(0xc82005f520)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/json/scanner/scanner.go:103 +0xc1
+github.com/hashicorp/hcl/json/scanner.(*Scanner).scanDigits(0xc82005f520, 0x0, 0x8, 0x2, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/json/scanner/scanner.go:359 +0x1ad
+github.com/hashicorp/hcl/json/scanner.(*Scanner).scanEscape(0xc82005f520, 0x2200000000)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/json/scanner/scanner.go:331 +0x143
+github.com/hashicorp/hcl/json/scanner.(*Scanner).scanString(0xc82005f520)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/json/scanner/scanner.go:315 +0x3c1
+github.com/hashicorp/hcl/json/scanner.(*Scanner).Scan(0xc82005f520, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/json/scanner/scanner.go:166 +0x85e
+github.com/hashicorp/hcl/json/parser.(*Parser).scan(0xc82003bcc0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/json/parser/parser.go:256 +0x1cf
+github.com/hashicorp/hcl/json/parser.(*Parser).objectKey(0xc82003bcc0, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/json/parser/parser.go:121 +0x125
+github.com/hashicorp/hcl/json/parser.(*Parser).objectItem(0xc82003bcc0, 0x0, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/json/parser/parser.go:95 +0xca
+github.com/hashicorp/hcl/json/parser.(*Parser).objectList(0xc82003bcc0, 0x0, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/json/parser/parser.go:70 +0x12c
+github.com/hashicorp/hcl/json/parser.(*Parser).objectType(0xc82003bcc0, 0x0, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/json/parser/parser.go:184 +0xf2
+github.com/hashicorp/hcl/json/parser.(*Parser).object(0xc82003bcc0, 0x0, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/json/parser/parser.go:169 +0x1f4
+github.com/hashicorp/hcl/json/parser.(*Parser).Parse(0xc82003bcc0, 0xc82005f520, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/json/parser/parser.go:47 +0x14f
+github.com/hashicorp/hcl/json/parser.Parse(0x3d3000, 0x4, 0x200000, 0x2, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/json/parser/parser.go:33 +0x241
+github.com/hashicorp/hcl.parse(0x3d3000, 0x4, 0x200000, 0x0, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/parse.go:28 +0x129
+github.com/hashicorp/hcl.Unmarshal(0x3d3000, 0x4, 0x200000, 0x18d2e0, 0xc82000b030, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/decoder.go:27 +0x7e
+github.com/BrianHicks/fuzz-hcl.ParseSafely(0x3d3000, 0x4, 0x200000, 0x0, 0x0, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/BrianHicks/fuzz-hcl/fuzz.go:20 +0xc1
+github.com/BrianHicks/fuzz-hcl.Fuzz(0x3d3000, 0x4, 0x200000, 0x3)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/BrianHicks/fuzz-hcl/fuzz.go:11 +0x105
+go-fuzz-dep.Main(0x23a3e8)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/go-fuzz-dep/main.go:49 +0x14c
+main.main()
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/go.fuzz.main/main.go:10 +0x23
+exit status 2

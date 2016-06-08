@@ -1,0 +1,40 @@
+panic: unquote "\503n" err: invalid syntax
+
+goroutine 1 [running]:
+panic(0x19b960, 0xc82000a430)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/runtime/panic.go:481 +0x3e6
+github.com/hashicorp/hcl/hcl/token.Token.Value(0x9, 0x0, 0x0, 0x1, 0x1, 0x2, 0xc82000a1f0, 0x7, 0x0, 0x0, ...)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/hcl/token/token.go:157 +0xc1c
+github.com/hashicorp/hcl.(*decoder).decodeMap(0xc8200abd60, 0xc82000a3f0, 0x9, 0x383078, 0xc820010380, 0x19b160, 0xc82002e030, 0x195, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/decoder.go:349 +0x13e6
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200abd60, 0xc82000a3f0, 0x9, 0x3831a8, 0xc82005c180, 0x19b160, 0xc82002e030, 0x195, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/decoder.go:100 +0xcc6
+github.com/hashicorp/hcl.(*decoder).decodeSlice(0xc8200abd60, 0xc82000a380, 0x6, 0x383078, 0xc820010280, 0x192ec0, 0xc820010300, 0x97, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/decoder.go:446 +0x7b1
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200abd60, 0xc82000a380, 0x6, 0x383078, 0xc820010280, 0x19a5a0, 0xc82000a3a0, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/decoder.go:104 +0xe16
+github.com/hashicorp/hcl.(*decoder).decodeInterface(0xc8200abd60, 0xc82000a380, 0x6, 0x383078, 0xc820010280, 0x19a5a0, 0xc82000a3a0, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/decoder.go:284 +0x6de
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200abd60, 0xc82000a380, 0x6, 0x383078, 0xc820010280, 0x19a5a0, 0xc82000a3a0, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/decoder.go:98 +0xc14
+github.com/hashicorp/hcl.(*decoder).decodeMap(0xc8200abd60, 0x1fc790, 0x4, 0x383078, 0xc820010200, 0x19b160, 0xc820012210, 0x15, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/decoder.go:378 +0x1b91
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200abd60, 0x1fc790, 0x4, 0x383078, 0xc820010200, 0x19a5a0, 0xc82000a180, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/decoder.go:100 +0xcc6
+github.com/hashicorp/hcl.(*decoder).decodeInterface(0xc8200abd60, 0x1fc790, 0x4, 0x383078, 0xc820010200, 0x19a5a0, 0xc82000a180, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/decoder.go:284 +0x6de
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200abd60, 0x1fc790, 0x4, 0x383078, 0xc820010200, 0x19a5a0, 0xc82000a180, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/decoder.go:98 +0xc14
+github.com/hashicorp/hcl.DecodeObject(0x18d2e0, 0xc82000a180, 0x383078, 0xc820010200, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/decoder.go:60 +0x409
+github.com/hashicorp/hcl.Unmarshal(0x3d3000, 0xa, 0x200000, 0x18d2e0, 0xc82000a180, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/hashicorp/hcl/decoder.go:32 +0x192
+github.com/BrianHicks/fuzz-hcl.ParseSafely(0x3d3000, 0xa, 0x200000, 0x0, 0x0, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/BrianHicks/fuzz-hcl/fuzz.go:20 +0xc1
+github.com/BrianHicks/fuzz-hcl.Fuzz(0x3d3000, 0xa, 0x200000, 0xc82005c058)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/github.com/BrianHicks/fuzz-hcl/fuzz.go:11 +0x105
+go-fuzz-dep.Main(0x23a3e8)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/go-fuzz-dep/main.go:49 +0x14c
+main.main()
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build846495901/src/go.fuzz.main/main.go:10 +0x23
+exit status 2
