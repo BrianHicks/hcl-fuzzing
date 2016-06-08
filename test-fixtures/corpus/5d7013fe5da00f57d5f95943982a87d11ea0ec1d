@@ -1,0 +1,5 @@
+o=<<-OF
+  baz
+    bar
+      foo
+      EOF

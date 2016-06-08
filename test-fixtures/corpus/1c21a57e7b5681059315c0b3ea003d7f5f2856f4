@@ -1,0 +1,4 @@
+o=<<-EOF
+        bar
+        baz
+      EOF

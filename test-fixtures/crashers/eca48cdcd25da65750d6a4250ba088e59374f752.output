@@ -1,0 +1,148 @@
+panic: runtime error: index out of range
+
+goroutine 1 [running]:
+panic(0x1ceae0, 0xc82000a0b0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/runtime/panic.go:481 +0x3e6
+github.com/hashicorp/hcl/hcl/ast.(*ObjectList).Pos(0xc8200103c0, 0x0, 0xc82009ed90, 0xc82009edc0, 0xc82009ed90, 0x19aee0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/hcl/ast/ast.go:112 +0x11f
+github.com/hashicorp/hcl.(*decoder).decodeMap(0xc8200a9d40, 0xc82000ea00, 0x33, 0x3871c0, 0xc8200103c0, 0x19aee0, 0xc82002e178, 0x195, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:343 +0x1083
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc82000ea00, 0x33, 0x387218, 0xc82005c2a0, 0x19aee0, 0xc82002e178, 0x195, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:100 +0xcc6
+github.com/hashicorp/hcl.(*decoder).decodeSlice(0xc8200a9d40, 0xc8200126f0, 0x30, 0x387218, 0xc82005c2a0, 0x192c40, 0xc820010a40, 0x97, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:446 +0x7b1
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc8200126f0, 0x30, 0x387218, 0xc82005c2a0, 0x19a320, 0xc82000ad50, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:104 +0xe16
+github.com/hashicorp/hcl.(*decoder).decodeInterface(0xc8200a9d40, 0xc8200126f0, 0x30, 0x387218, 0xc82005c2a0, 0x19a320, 0xc82000ad50, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:284 +0x6de
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc8200126f0, 0x30, 0x387218, 0xc82005c2a0, 0x19a320, 0xc82000ad50, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:98 +0xc14
+github.com/hashicorp/hcl.(*decoder).decodeMap(0xc8200a9d40, 0xc820012690, 0x2f, 0x3871c0, 0xc820010a00, 0x19aee0, 0xc82002e160, 0x195, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:378 +0x1b91
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc820012690, 0x2f, 0x3872f0, 0xc82005c6c0, 0x19aee0, 0xc82002e160, 0x195, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:100 +0xcc6
+github.com/hashicorp/hcl.(*decoder).decodeSlice(0xc8200a9d40, 0xc820012660, 0x2c, 0x3871c0, 0xc8200109a0, 0x192c40, 0xc8200109e0, 0x97, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:446 +0x7b1
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc820012660, 0x2c, 0x3871c0, 0xc8200109a0, 0x19a320, 0xc82000acd0, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:104 +0xe16
+github.com/hashicorp/hcl.(*decoder).decodeInterface(0xc8200a9d40, 0xc820012660, 0x2c, 0x3871c0, 0xc8200109a0, 0x19a320, 0xc82000acd0, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:284 +0x6de
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc820012660, 0x2c, 0x3871c0, 0xc8200109a0, 0x19a320, 0xc82000acd0, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:98 +0xc14
+github.com/hashicorp/hcl.(*decoder).decodeMap(0xc8200a9d40, 0xc820012600, 0x2b, 0x3871c0, 0xc820010980, 0x19aee0, 0xc82002e140, 0x195, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:378 +0x1b91
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc820012600, 0x2b, 0x3872f0, 0xc82005c660, 0x19aee0, 0xc82002e140, 0x195, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:100 +0xcc6
+github.com/hashicorp/hcl.(*decoder).decodeSlice(0xc8200a9d40, 0xc8200125d0, 0x28, 0x3871c0, 0xc820010920, 0x192c40, 0xc820010960, 0x97, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:446 +0x7b1
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc8200125d0, 0x28, 0x3871c0, 0xc820010920, 0x19a320, 0xc82000ac50, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:104 +0xe16
+github.com/hashicorp/hcl.(*decoder).decodeInterface(0xc8200a9d40, 0xc8200125d0, 0x28, 0x3871c0, 0xc820010920, 0x19a320, 0xc82000ac50, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:284 +0x6de
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc8200125d0, 0x28, 0x3871c0, 0xc820010920, 0x19a320, 0xc82000ac50, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:98 +0xc14
+github.com/hashicorp/hcl.(*decoder).decodeMap(0xc8200a9d40, 0xc820012570, 0x26, 0x3871c0, 0xc820010900, 0x19aee0, 0xc82002e120, 0x195, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:378 +0x1b91
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc820012570, 0x26, 0x3872f0, 0xc82005c600, 0x19aee0, 0xc82002e120, 0x195, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:100 +0xcc6
+github.com/hashicorp/hcl.(*decoder).decodeSlice(0xc8200a9d40, 0xc820012540, 0x23, 0x3871c0, 0xc8200108a0, 0x192c40, 0xc8200108e0, 0x97, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:446 +0x7b1
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc820012540, 0x23, 0x3871c0, 0xc8200108a0, 0x19a320, 0xc82000abc0, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:104 +0xe16
+github.com/hashicorp/hcl.(*decoder).decodeInterface(0xc8200a9d40, 0xc820012540, 0x23, 0x3871c0, 0xc8200108a0, 0x19a320, 0xc82000abc0, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:284 +0x6de
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc820012540, 0x23, 0x3871c0, 0xc8200108a0, 0x19a320, 0xc82000abc0, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:98 +0xc14
+github.com/hashicorp/hcl.(*decoder).decodeMap(0xc8200a9d40, 0xc8200124e0, 0x22, 0x3871c0, 0xc820010880, 0x19aee0, 0xc82002e100, 0x195, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:378 +0x1b91
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc8200124e0, 0x22, 0x3872f0, 0xc82005c5a0, 0x19aee0, 0xc82002e100, 0x195, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:100 +0xcc6
+github.com/hashicorp/hcl.(*decoder).decodeSlice(0xc8200a9d40, 0xc820010820, 0x1f, 0x3871c0, 0xc820010800, 0x192c40, 0xc820010860, 0x97, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:446 +0x7b1
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc820010820, 0x1f, 0x3871c0, 0xc820010800, 0x19a320, 0xc82000ab40, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:104 +0xe16
+github.com/hashicorp/hcl.(*decoder).decodeInterface(0xc8200a9d40, 0xc820010820, 0x1f, 0x3871c0, 0xc820010800, 0x19a320, 0xc82000ab40, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:284 +0x6de
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc820010820, 0x1f, 0x3871c0, 0xc820010800, 0x19a320, 0xc82000ab40, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:98 +0xc14
+github.com/hashicorp/hcl.(*decoder).decodeMap(0xc8200a9d40, 0xc8200107c0, 0x1d, 0x3871c0, 0xc8200107e0, 0x19aee0, 0xc82002e0e0, 0x195, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:378 +0x1b91
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc8200107c0, 0x1d, 0x3872f0, 0xc82005c540, 0x19aee0, 0xc82002e0e0, 0x195, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:100 +0xcc6
+github.com/hashicorp/hcl.(*decoder).decodeSlice(0xc8200a9d40, 0xc820010760, 0x1a, 0x3871c0, 0xc820010740, 0x192c40, 0xc8200107a0, 0x97, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:446 +0x7b1
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc820010760, 0x1a, 0x3871c0, 0xc820010740, 0x19a320, 0xc82000aab0, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:104 +0xe16
+github.com/hashicorp/hcl.(*decoder).decodeInterface(0xc8200a9d40, 0xc820010760, 0x1a, 0x3871c0, 0xc820010740, 0x19a320, 0xc82000aab0, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:284 +0x6de
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc820010760, 0x1a, 0x3871c0, 0xc820010740, 0x19a320, 0xc82000aab0, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:98 +0xc14
+github.com/hashicorp/hcl.(*decoder).decodeMap(0xc8200a9d40, 0xc820010700, 0x18, 0x3871c0, 0xc820010720, 0x19aee0, 0xc82002e0c0, 0x195, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:378 +0x1b91
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc820010700, 0x18, 0x3872f0, 0xc82005c4e0, 0x19aee0, 0xc82002e0c0, 0x195, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:100 +0xcc6
+github.com/hashicorp/hcl.(*decoder).decodeSlice(0xc8200a9d40, 0xc8200106a0, 0x15, 0x3871c0, 0xc820010680, 0x192c40, 0xc8200106e0, 0x97, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:446 +0x7b1
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc8200106a0, 0x15, 0x3871c0, 0xc820010680, 0x19a320, 0xc82000aa30, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:104 +0xe16
+github.com/hashicorp/hcl.(*decoder).decodeInterface(0xc8200a9d40, 0xc8200106a0, 0x15, 0x3871c0, 0xc820010680, 0x19a320, 0xc82000aa30, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:284 +0x6de
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc8200106a0, 0x15, 0x3871c0, 0xc820010680, 0x19a320, 0xc82000aa30, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:98 +0xc14
+github.com/hashicorp/hcl.(*decoder).decodeMap(0xc8200a9d40, 0xc820010640, 0x13, 0x3871c0, 0xc820010660, 0x19aee0, 0xc82002e0a0, 0x195, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:378 +0x1b91
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc820010640, 0x13, 0x3872f0, 0xc82005c480, 0x19aee0, 0xc82002e0a0, 0x195, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:100 +0xcc6
+github.com/hashicorp/hcl.(*decoder).decodeSlice(0xc8200a9d40, 0xc82000a980, 0x10, 0x3871c0, 0xc8200105e0, 0x192c40, 0xc820010620, 0x97, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:446 +0x7b1
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc82000a980, 0x10, 0x3871c0, 0xc8200105e0, 0x19a320, 0xc82000a9a0, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:104 +0xe16
+github.com/hashicorp/hcl.(*decoder).decodeInterface(0xc8200a9d40, 0xc82000a980, 0x10, 0x3871c0, 0xc8200105e0, 0x19a320, 0xc82000a9a0, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:284 +0x6de
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc82000a980, 0x10, 0x3871c0, 0xc8200105e0, 0x19a320, 0xc82000a9a0, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:98 +0xc14
+github.com/hashicorp/hcl.(*decoder).decodeMap(0xc8200a9d40, 0xc82000a930, 0xe, 0x3871c0, 0xc8200105c0, 0x19aee0, 0xc82002e080, 0x195, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:378 +0x1b91
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc82000a930, 0xe, 0x3872f0, 0xc82005c420, 0x19aee0, 0xc82002e080, 0x195, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:100 +0xcc6
+github.com/hashicorp/hcl.(*decoder).decodeSlice(0xc8200a9d40, 0xc82000a8e0, 0xb, 0x3871c0, 0xc820010560, 0x192c40, 0xc8200105a0, 0x97, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:446 +0x7b1
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc82000a8e0, 0xb, 0x3871c0, 0xc820010560, 0x19a320, 0xc82000a900, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:104 +0xe16
+github.com/hashicorp/hcl.(*decoder).decodeInterface(0xc8200a9d40, 0xc82000a8e0, 0xb, 0x3871c0, 0xc820010560, 0x19a320, 0xc82000a900, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:284 +0x6de
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc82000a8e0, 0xb, 0x3871c0, 0xc820010560, 0x19a320, 0xc82000a900, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:98 +0xc14
+github.com/hashicorp/hcl.(*decoder).decodeMap(0xc8200a9d40, 0xc82000a880, 0x9, 0x3871c0, 0xc820010540, 0x19aee0, 0xc82002e060, 0x195, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:378 +0x1b91
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc82000a880, 0x9, 0x3872f0, 0xc82005c3c0, 0x19aee0, 0xc82002e060, 0x195, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:100 +0xcc6
+github.com/hashicorp/hcl.(*decoder).decodeSlice(0xc8200a9d40, 0xc82000a7c8, 0x6, 0x3871c0, 0xc820010440, 0x192c40, 0xc8200104c0, 0x97, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:446 +0x7b1
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc82000a7c8, 0x6, 0x3871c0, 0xc820010440, 0x19a320, 0xc82000a820, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:104 +0xe16
+github.com/hashicorp/hcl.(*decoder).decodeInterface(0xc8200a9d40, 0xc82000a7c8, 0x6, 0x3871c0, 0xc820010440, 0x19a320, 0xc82000a820, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:284 +0x6de
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0xc82000a7c8, 0x6, 0x3871c0, 0xc820010440, 0x19a320, 0xc82000a820, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:98 +0xc14
+github.com/hashicorp/hcl.(*decoder).decodeMap(0xc8200a9d40, 0x1fc510, 0x4, 0x3871c0, 0xc820010380, 0x19aee0, 0xc820012390, 0x15, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:378 +0x1b91
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0x1fc510, 0x4, 0x3871c0, 0xc820010380, 0x19a320, 0xc82000a510, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:100 +0xcc6
+github.com/hashicorp/hcl.(*decoder).decodeInterface(0xc8200a9d40, 0x1fc510, 0x4, 0x3871c0, 0xc820010380, 0x19a320, 0xc82000a510, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:284 +0x6de
+github.com/hashicorp/hcl.(*decoder).decode(0xc8200a9d40, 0x1fc510, 0x4, 0x3871c0, 0xc820010380, 0x19a320, 0xc82000a510, 0x194, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:98 +0xc14
+github.com/hashicorp/hcl.DecodeObject(0x18d060, 0xc82000a510, 0x3871c0, 0xc820010380, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:60 +0x409
+github.com/hashicorp/hcl.Unmarshal(0x3d3000, 0x16, 0x200000, 0x18d060, 0xc82000a510, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/hashicorp/hcl/decoder.go:32 +0x192
+github.com/BrianHicks/fuzz-hcl.ParseSafely(0x3d3000, 0x16, 0x200000, 0x0, 0x0, 0x0, 0x0)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/BrianHicks/fuzz-hcl/fuzz.go:20 +0xc1
+github.com/BrianHicks/fuzz-hcl.Fuzz(0x3d3000, 0x16, 0x200000, 0x3)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/github.com/BrianHicks/fuzz-hcl/fuzz.go:11 +0x105
+go-fuzz-dep.Main(0x23a168)
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/go-fuzz-dep/main.go:49 +0x14c
+main.main()
+	/var/folders/f6/l26tk3xs5pjczcd5k5pcrmk00000gn/T/go-fuzz-build276364892/src/go.fuzz.main/main.go:10 +0x23
+exit status 2
